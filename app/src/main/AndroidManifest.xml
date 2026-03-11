@@ -20,6 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AddEditRoomActivity"
+            android:exported="false"
+            android:label="Thêm/Sửa phòng trọ" />
     </application>
 
 </manifest>
