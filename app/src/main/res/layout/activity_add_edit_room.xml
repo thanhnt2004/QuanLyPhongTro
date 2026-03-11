@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_ma_phong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ma_phong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mã phòng" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_ten_phong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/til_ma_phong">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ten_phong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên phòng" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_gia_thue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/til_ten_phong">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_gia_thue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Giá thuê"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_label_tinh_trang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tình trạng:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_gia_thue" />
+
+    <RadioGroup
+        android:id="@+id/rg_tinh_trang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_tinh_trang">
+
+        <RadioButton
+            android:id="@+id/rb_trong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Còn trống" />
+
+        <RadioButton
+            android:id="@+id/rb_da_thue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Đã thuê" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_ten_nguoi_thue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/rg_tinh_trang">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ten_nguoi_thue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên người thuê" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_so_dien_thoai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/til_ten_nguoi_thue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_so_dien_thoai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Số điện thoại"
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Lưu"
+        app:layout_constraintTop_toBottomOf="@id/til_so_dien_thoai" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
